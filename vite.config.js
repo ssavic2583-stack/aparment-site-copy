@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss ()],
-    base: 'apartment-site-copy',
+    base: '/apartment-site-copy/',
 })
