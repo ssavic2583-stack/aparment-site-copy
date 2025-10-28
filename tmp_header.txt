@@ -1,0 +1,52 @@
+import React from 'react'
+import Navbar from './Navbar'
+import { assets } from '../assets/assets'
+
+const Header = () => {
+  return (
+    <div
+      className="relative min-h-screen mb-4 flex flex-col justify-center w-full overflow-hidden text-white"
+      id="Header"
+    >
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src={assets.video_apartman} type="video/mp4" />
+      </video>
+
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-[1]" />
+
+      {/* Navbar fixed at top */}
+      <div className="absolute top-0 left-0 w-full z-20">
+        <Navbar />
+      </div>
+
+      {/* Centered content */}
+      <div className="relative z-10 text-center mt-32">
+        <h2 className="text-5xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl mx-auto">
+          Explore homes that fit your dreams
+        </h2>
+        <div className="space-x-6 mt-16">
+          <a
+            href="#Projects"
+            className="border border-white px-8 py-3 rounded hover:bg-white hover:text-black transition"
+          >
+            Projects
+          </a>
+          <a
+            href="#Contact"
+            className="bg-blue-500 px-8 py-3 rounded hover:bg-blue-600 transition dark:!bg-red-500"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Header

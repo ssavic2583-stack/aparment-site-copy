@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.force-color * {
+  color: #C8A66A !important;
+}
+.force-bg-black * {
+  background-color: #000000 !important;
+  /* dark:dark:bg-zinc-800 */
+}
+@font-face {
+  font-family: 'Luxury';
+  src: url('./assets/luxury.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Theme variables */
+@theme {
+  --font-luxury: 'Luxury', serif;
+  --font-basic: 'Lato', sans-serif;
+  --luxury-color: #C8A66A; /* Define color as variable instead */
+}
+
+/* Example usage */
+.luxury-text {
+  font-family: var(--font-luxury);
+  color: var(--luxury-color);
+}
+
